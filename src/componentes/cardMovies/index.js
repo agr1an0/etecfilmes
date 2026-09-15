@@ -1,15 +1,16 @@
 import react from "react";
 import { Touchable, TouchableOpacity } from "react-native";
-import {View, Image, Text, TouchableOpacity} from  'react-native'
-import styles from "./styles.js";
+import {View, Image, Text} from  'react-native'
+import styles from "./style.js";
 
-export default function cardMovies(titulo, nota, imagem) {
+export default function CardMovies({titulo, nota, imagem}) {
 
      return(
 
          <TouchableOpacity>
-            <Image style = {styles.imagens} source={{uri:item.imagem}} />
-            <Text style={{color: 'white', fontSize: '20px', }}> {item.nome} </Text>
+            <Image style = {styles.imagens} source={{uri: imagem}} />
+            <Text style={{color: 'white', fontSize: '20px' }}> {nota} </Text>
+            <Text style={{color: 'white', fontSize: '20px' }}> {titulo} </Text>
           </TouchableOpacity>
      )
 }

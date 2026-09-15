@@ -4,8 +4,9 @@ import { FlatList, TextInput } from 'react-native-web';
 import Header from './src/componentes/Header';
 import Search from './src/componentes/Search';
 import Banner from './src/componentes/Banner';
-import cardMovies from './src/componentes/cardMovies';
+import CardMovies from './src/componentes/cardMovies';
 import Filmes from './Data/Filmes';
+import {Rotas} from "./src/rotas/index"
 export default function App() {
   return (
     <View style={styles.container}>
@@ -44,13 +45,13 @@ export default function App() {
         data={Filmes}
         keyExtractor={(item)=> item.id}
         renderItem={({item})=> (
-          <cardMovies
-            titulo={item.nome}
-            nota={item.nota}
-            imagem={item.imagem}
-          />
-          
-        
+         <CardMovies
+         titulo = {item.nome}
+         imagem={item.imagem}
+         nota = {item.nota}
+         />
+
+       
         )}
         />
       </View>

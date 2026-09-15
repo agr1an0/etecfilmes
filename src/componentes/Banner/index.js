@@ -6,7 +6,7 @@ import { TextInput } from 'react-native-web';
 export default function Banner() {
     return (
       <View>
-      <text style={styles.textBanner}> Em Cartaz </text>
+      <Text style={styles.textBanner}> Em Cartaz </Text>
       <Image source={require("../../../assets/adão.jpg")}
       style={styles.imageBanner}/>
     </View>

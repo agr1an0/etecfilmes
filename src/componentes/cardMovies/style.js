@@ -26,13 +26,13 @@ const styles = StyleSheet.create({
         paddingLeft:4
     },
 
-    images:{
-        width:'100%',
-        height:170,
-        borderRadius: 8,    
-       
+       imagens:{
+        width:140,
+        height: 160,
+        margin: '15px',
+        border: 'solid white 5px',
+        borderRadius: 8
     }
-
 })
 
 export default styles

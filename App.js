@@ -6,56 +6,10 @@ import Search from './src/componentes/Search';
 import Banner from './src/componentes/Banner';
 import CardMovies from './src/componentes/cardMovies';
 import Filmes from './Data/Filmes';
-import {Rotas} from "./src/rotas/index"
+import Rotas from "./src/rotas/index"
 export default function App() {
   return (
-    <View style={styles.container}>
-      {/* INICIO DO HEADER */}
-       <Header></Header>
-      {/* INICIO PESQUISA */}
-      <Search></Search>
-    
-      <Banner></Banner>
-       {/* <View>
-      <text style={styles.textBanner}> Em Cartaz </text>
-      <Image source={require("./assets/adão.jpg")}
-      style={styles.imageBanner}/>
-    </View> */}
-      {/* <view style={styles.containerSearch}> 
-      <TextInput 
-      placeholder = 'Digite o filme que deseja buscar'
-      style={styles.inputSearch}
-      ></TextInput>
-      
-      <TouchableOpacity>
-      <Feather name="search" size={24} color="black" />
-      </TouchableOpacity>
-      
-      </view>
-       */}
-       {/* inicio Banner (não teria outra view?)*/}
-       {/* <View>
-      <text style={styles.textBanner}> Em Cartaz </text>
-      <Image source={require("./assets/adão.jpg")}
-      style={styles.imageBanner} />
-    </View>  */}
-      <View style = {{width: '90%'}}>
-        <FlatList
-        horizontal= {true}
-        data={Filmes}
-        keyExtractor={(item)=> item.id}
-        renderItem={({item})=> (
-         <CardMovies
-         titulo = {item.nome}
-         imagem={item.imagem}
-         nota = {item.nota}
-         />
-
-       
-        )}
-        />
-      </View>
-  </View>
+  <Rotas></Rotas>
   );
 }
 
